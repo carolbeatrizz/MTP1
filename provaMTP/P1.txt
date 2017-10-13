@@ -1,0 +1,86 @@
+Integrantes do grupo:
+Sâmara Cristina Santos            11611EBI011
+Carolina Beatriz Pereira da Silva 11711EBI022
+Alana Miyai Bonitátibus           11711EBI018
+
+---
+QUESTÃO 1
+
+KANO0=2
+KANO1=3
+KANO2=3
+
+KCUR0=2
+KCUR1=2
+KCUR2=2
+
+KNUM0=3
+KNUM1=5
+KNUM2=1
+
+---
+QUESTÃO 2
+
+4/ 3/ -2
+---
+
+---
+QUESTÃO 3
+7 / 6 / 9
+---
+
+---
+QUESTÃO 4
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+int main()
+{
+int x = 2, y = 3+3, z = 3+5+1;
+int i, soma = x+y, multip = 0;
+printf("A soma de %d e %d = %d\n", x, y, soma);
+if(z > 10)
+printf("O numero z = %d (maior que 10)\n", z);
+for(i = 0; i < x; i++)
+multip = multip + z;
+printf("O resultado de %d vezes %d = %d\n", x, z, multip);getch();
+return 0;
+}
+---
+
+---
+QUESTÃO 5
+
+a. 49 / 0 / 49
+b. O primeiro número impresso na tela representa o número salvo na posição indicada
+por pela string str e o inteiro x. O segundo número representa o valor guardado na posição indicada
+pela expressão: inteiro y vezes 4 menos 4, e o terceiro número representa o valor guardado na posição
+indicada por 2 vezes o inteiro y. Os números mostrados são inteiros, de acordo com o indicador %d no printf.
+---
+
+---
+QUESTÃO 6
+
+a. O tigre constroi um osso
+b.
+
+Declarações:
+O programa se inicia com a declaração de variáveis do tipo inteiro,dependentes do número 
+obtido no cálculo das matrículas. Logo as variáveis x,y e z serão resultado do resto da divisão
+da soma das constantes por 9.
+Em seguida são declaradas 3 strings do tipo char,com seus respectivos caracteres, e 3 vetores
+do tipo inteiro,inicializados com seus respectivos números.
+Também são declarados a variável i do tipo inteiro e o ponteiro ptr do tipo char.
+
+Operações:
+Nos laços a variável i será inicializada com uma posição(x,y,z) de um vetor
+(len1,len2,len3) e o ponteiro ptr será inicializado com uma string (str1,str2,str3)
+mais a variável i. A variável i e o ponteiro ptr serão incrementados enquanto 
+o laço rodar,o que ocorre desde que a variável i seja menor que a posição
+(x+1,y+1,z+1) do vetor (len1,len2,len3).
+
+A mensagem secreta mostrada na tela é o endereço guardado no ponteiro ptr,
+que aponta para uma posição na string (str1,str2,str3) que é dada pelo vetor
+(len1,len2,len3), que por sua vez é dependente das constantes (x,y,z).
+
