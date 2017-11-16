@@ -1,0 +1,282 @@
+Integrantes do grupo:
+Sâmara Cristina Santos            11611EBI011
+Carolina Beatriz Pereira da Silva 11711EBI022
+Alana Miyai Bonitátibus           11711EBI018
+
+-----------
+
+QUESTÃO 1
+
+KANO0= 2    KCUR0=2   KNUM0=3
+KANO1= 3    KCUR1=2   KNUM1=5
+KANO2= 3    KCUR2=2   KNUM2=1
+
+----------
+
+QUESTÃO 2
+
+a- 
+A forca gravitacional entre as esferas azul e vermelha, distantes 8.463155
+metros uma da outra é de 2.793717 Newtons.
+
+b-
+Define-se primeiramente a constante global G, do tipo double,que será utilizada
+na função posteriormente.
+Define-se a struct stEsfera,que também é global, com dados do tipo double, com suas respectivas
+características: coordenadas (x,y,z) e massa.
+
+Cria-se uma função,do tipo double,para calcular a distância entre as esferas azul
+e vermelha. Os parâmetros entre parenteses na declaração da função são apenas chamadas
+para os valores declarados na função main e não precisam ter a mesma grafia.
+A fórmula da distância é dada pela raiz quadrada da soma do quadrado das diferenças das coordenadas.
+Para isso são utilizados os valores de (x,y,z) de ambas esferas,obtidos da função main.
+Esse valor obtido é retornado para a função main.
+
+Cria-se uma função,do tipo double, para calcular a força gravitacional.Os parâmetros entre parenteses na declaração da função são apenas chamadas
+para os valores declarados na função main e não precisam ter a mesma grafia. A fórmula da força é dada
+pela constante G,que multiplica o produto das massas das esferas,dividida pela distância entre as esferas ao quadrado.
+Para isso são utilizados os valores da constante global G,as massas das esferas obtidas na função main e
+a distância obtida pela função distância. Em seguida o valor obtido é retornado para a função main.
+
+A função main é dada com a declaração das esferas azul e vermelha e a obtenção de suas respectivas
+coordenadas (x,y,z), que são armazenadas na struct. Em seguida são chamadas as funções de distância
+e força gravitacional,e são enviados todos os valores inclusos na struct que são necessários para seus 
+cálculos. O valor obtido na função distância é retornado a função main e em seguida enviado a função
+força gravitacional.
+
+----------
+
+QUESTÃO 3
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <conio.h>
+
+typedef
+struct stArmazem {
+char codigo[5];
+double preco;
+}
+Armazem;
+Armazem criaInstancia(char * codigo, double preco) {
+Armazem temp;
+int i;
+for(i = 0; i < 5; i++) {
+codigo[i] -= (codigo[i])? 1 : 0;
+temp.codigo[i] = codigo[i];
+}
+preco -= 10.0;
+temp.preco = preco;
+return temp;
+}
+int main() {
+int i;
+Armazem instancia, novainsta;
+for(i = 0; i < 5; i++)
+instancia.codigo[i] = 'z' - i*(3-2+5-3);
+instancia.codigo[5-1] = '\0';
+instancia.preco = (double)(3+2+1+2)/10.0;
+printf("\ninstancia: %s %lf\n", instancia.codigo, instancia.preco);
+novainsta =
+criaInstancia(instancia.codigo, instancia.preco);
+printf("\ninstancia: %s %lf\n", instancia.codigo, instancia.preco);
+printf("\nnovainsta: %s %lf\n", novainsta.codigo, novainsta.preco);
+getche();
+return 0;
+}
+
+
+
+a- Instancia:        código: zwtq  preço:  0.800000
+   Instancia:        código: yvsp  preço:  0.800000
+   Nova Instancia:   código: yvsp  preço: -9.200000
+
+b- 18 bytes,distribuídos da seguinte mandeira: 10 bytes resultantes
+da string codigo e 8 bytes resultantes da variável preço.
+
+d- A função criaInstancia é responsável por alterar o código da variável
+instancia e atribui seu o valor da variável novainsta. Logo, temos que
+o preço inicial de instancia não se altera ( diferente do cálculo realizado
+para novainsta). E o código de instancia inicial é modificado, sendo igual
+ao código de novainsta.
+-----------
+
+QUESTÃO 4
+
+a-
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#define N 3
+typedef
+struct stTexto 
+{
+int id;
+char mat[12];
+}
+Texto;
+
+void imprime(Texto * dado, int qtde)
+{
+if(qtde > 0)
+{
+imprime(dado+1,qtde-1);
+printf(": (%d) %s ", dado->id, dado->mat);
+}
+else printf(":\n");
+}
+int main()
+{
+Texto grupo[N];
+int i;
+for(i = 0; i < N; i++)
+	grupo[i].id = i;
+strcpy(grupo[0].mat,"11611EBI011");
+strcpy(grupo[1].mat,"11711EBI022");
+strcpy(grupo[2].mat,"11711EBI018");
+imprime(grupo, N);
+getche();
+return 0;
+}
+
+
+Resultados obtidos:
+(2) 11711EBI018
+(1) 11711EBI022
+(0) 11611EBI011
+
+b-
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#define N 3
+typedef
+struct stTexto 
+{
+int id;
+char mat[12];
+}
+Texto;
+
+void imprime(Texto * dado, int qtde)
+{
+if(qtde > 0)
+{
+printf(": (%d) %s ", dado->id, dado->mat);
+imprime(dado+1,qtde-1);
+}
+else printf(":\n");
+}
+int main()
+{
+Texto grupo[N];
+int i;
+for(i = 0; i < N; i++)
+	grupo[i].id = i;
+strcpy(grupo[0].mat,"11611EBI011");
+strcpy(grupo[1].mat,"11711EBI022");
+strcpy(grupo[2].mat,"11711EBI018");
+imprime(grupo, N);
+getche();
+return 0;
+}
+
+Resultados obtidos:
+(0): 11611EBI011
+(1): 11711EBI022
+(2): 11711EBI018
+
+c-
+Explicação:
+Na função int main o for é inicializado com a variável i=0.Para que a função imprime siga
+a ordem crescente é necessário garantir que a mesma mostre o resultado desejado antes de 
+realizar alteração nos dados de entrada.Ou seja,os dados dos grupos,que são structs preenchidos
+com as respectivas matrículas, são enviados para a função imprime, enquanto o i for menor que N.
+O laço irá rodar carregando os três grupos,indo de i=0 até i=2.
+Os dados do grupo[0] são impressos pelo printf antes que a recursão da função imprime seja realizada. 
+Os demais grupos passam pela recursão da função.
+Caso o grupo[0] também passe pela recursão a ordem dos resultados será o inverso do objetivo
+desejado, uma vez que o resultado final será analisado mais de uma vez. 
+
+--------
+
+QUESTÃO 5
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+int fib(int indice) {
+static int memoria[36] = {0,1};
+int condicao = (memoria[indice] || !indice);
+int resposta = (condicao)? memoria[indice] :
+fib(indice-1) + fib(indice-2);
+return resposta;
+}
+int main() {
+printf("Fibonacci(%d) = %d\n", 3-1, fib(3-1));
+printf("Fibonacci(%d) = %d\n", 5-1, fib(5-1));
+printf("Fibonacci(%d) = %d\n", 1-1, fib(1-1));
+printf("Numero secreto = %d", 3*fib(3-1) +
+3*fib(1-1) + 2*fib(5-1) -
+2*2*2);
+getche();
+return 0;
+}
+
+a- Fibonacci(2)= 1
+   Fibonacci(4)= 3
+   Fibonacci(0)= 0
+   Número secreto= 1
+
+b-
+
+
+c-
+  
+id escopo  Escopo 
+           origem    Retorno 	Índice 	          Condição 	                  Resposta 
+0 	   main 	 	6 	             falsa 	                fib(5)+fib(4) 
+1 	    0 	 	        5 	             falsa 	                fib(4)+fib(3) 
+2 	    1 	 	        4 	             falsa 	                fib(3)+fib(2) 
+3 	    2 	 	        3  	             falsa 	                fib(2)+fib(1) 
+4 	    3 	 	        2  	             falsa 	                fib(1)+fib(0) 
+5 	    2 	 	        1 	            verdadeira 	                     1 
+6 	    2 	 	        0 	            verdadeira 	                     0 
+4 	    3 	     5 e 6      2 	                                             falsa 	                   0 + 1 
+3 	    2 	       4 	3 	             falsa 	                1 + fib(1) 
+2 	    1  	       3 	4 	             falsa 	                2 + fib(2) 
+1 	    0 	       2 	5 	             falsa  	                3 + fib(3) 
+0 	 	       1 	6 	             falsa 	                5 + fib(4) 
+ 	 	       0 	 	 	                                     8 
+ 
+ 
+
+
+---------
+
+QUESTÃO 6
+
+int trib(int *n)
+
+{
+    int A;
+
+    
+     if(n>2)
+     {
+    A=trib(n-1)+2*trib(n-2)+3*trib(n-3);
+ 
+     }
+    
+     else
+     (A=n);
+    
+     return A;
+
+
+}
