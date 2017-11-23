@@ -1,33 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 #include "matriz.h"
 
 int main() 
 {
-	Matriz A, At, COMAT;
-	int nlin, ncol,i,j, cof;
-	printf("Entre com o numero de linhas e o numero de colunas: ");
-	if( nlin=ncol)
-	{
-	scanf("%d", &nlin); 
+	Matriz A, At, Mat;
+	int nlin, ncol, lin, col;
+	printf("Digite o numero de linhas e o numero de colunas: ");
+	scanf("%d", &nlin);
 	scanf("%d", &ncol);
-	A = criarMatriz(nlin, ncol);
-	preencherMatriz(A);
-	menor(A,nlin,ncol);
-	for ( i=0; i<=nlin ;i++)
-	{
-		for ( j=0; j<=ncol; j++)
-		{
-			cof = cofator(A,i,j);
-			COMAT[i][j]= cof;
-		}
-	}
-    At= transposta(COMAT);
-	imprimirMatriz(At);
-    destruirMatriz(At);
+	if (nlin==ncol)
+        {
+        A = criarMatriz(nlin, ncol);
+        preencherMatriz(A);
+        imprimirMatriz(A);
+        printf("Digite a linha e a coluna que deseja tirar o menor: ");
+        scanf("%d", &lin);
+        scanf("%d", &col);
+        menor(A, lin, col);
+        cofator (A, lin, col);
+        comatriz(A);
+        Mat = adjunta(A);
+        imprimirMatriz(Mat);
+        destruirMatriz(A);
+        destruirMatriz(Mat);
 	}
 	else
-		printf("Digite os valores de uma matriz quadrada");
+        printf("Digite uma matriz quadrada!");
 	return EXIT_SUCCESS;
 }

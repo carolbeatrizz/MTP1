@@ -1,18 +1,31 @@
-Multiplica_matrizes(Matriz mat1,Matriz mat2,Matriz mat3)
+#include <stdio.h>
+#include <stdlib.h>
+#include "matriz.h"
+
+int main() 
 {
-	Matriz mat1, mat2,mat3;
-	int lin,col,i,acumula;
-	if (mat1.col == mat2.lin)
-	{
-		for (int k=1; k <= mat1.lin; k++)
-		{
-			for (int l=1; l<=mat2.col; l++)
-			{
-				acumula=0;
-				for ( int i=1; i<= mat1.col; i++)
-					acumula = acumula + mat1[k][i]*mat2[i][l];]
-			}
-		}		
+	Matriz A, B, M;
+	int nlA, ncA, nlB, ncB;
+	printf("Digite o numero de linhas e o numero de colunas da matriz A: ");
+	scanf("%d", &nA);
+	scanf("%d", &ncA);
+	printf("Digite o numero de linhas e o numero de colunas da matriz B: ");
+	scanf("%d", &nlB);
+	scanf("%d", &ncB);
+	if (ncolA==nlinB)
+        {
+        A = criarMatriz(nlA, ncA);
+        preencherMatriz(A);
+        B = criarMatriz(nlB, ncB);
+        preencherMatriz(B);
+        M = criarMatriz(ncA, nlB);
+        M = multiplicaMat(A, B);
+        imprimirMatriz(M);
+        destruirMatriz(A);
+        destruirMatriz(B);
+        destruirMatriz(M);
 	}
-	imprimirMatriz(mat3);
+	else
+        printf("Nao e possivel realizar a multiplicacao");
+	return EXIT_SUCCESS;
 }
