@@ -1,9 +1,9 @@
-#include <iostream>
+
 #include <stdio.h>
 #include <math.h>
-using namespace std;
 
-void main()
+
+int main()
 {
 int num,base,logaritmo;
 printf("Digite um numero para o calculo: ");
