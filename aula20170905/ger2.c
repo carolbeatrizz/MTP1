@@ -1,7 +1,7 @@
 
-#include <iostream>
+
 #include <stdio.h>
-using namespace std;
+
 
 int main()
 {
@@ -16,5 +16,5 @@ if (flag==n)
 printf("O numero e perfeito");
 else
 printf("O numero nao e perfeito");
-system("pause");
+return 0;
 }
