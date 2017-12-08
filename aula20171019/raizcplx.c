@@ -59,5 +59,5 @@ int main()
 	   d=delta(a,b,c);
 	   raizcomp(d,a,b,c);
    }
-   system("pause");
+   return 0;
 }
