@@ -1,10 +1,10 @@
-#include <iostream>
+
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
-using namespace std;
 
-void main()
+
+int main()
 {
 char str[150];
 int cont=0;
