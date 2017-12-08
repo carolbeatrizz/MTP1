@@ -25,5 +25,5 @@ int main()
     destruirMatriz(B);
     destruirMatriz(Inv);
     destruirMatriz(Mult);
-	return EXIT_SUCCESS;
+	return 0;
 }
