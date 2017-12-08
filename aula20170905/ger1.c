@@ -1,7 +1,6 @@
 
-#include <iostream>
 #include <stdio.h>
-using namespace std;
+
 
 int main()
 {
@@ -19,5 +18,5 @@ if(flag==0)
 printf("O numero e primo");
 else
 printf("O numero nao e primo");
-system("pause");
+return 0;
 }
