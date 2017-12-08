@@ -28,5 +28,5 @@ printf("Digite o valor da multiplicacao de %d por 3: ",num3);
 scanf("%d,&num4);
 if (num4==num3*3)
 printf("Voce somou o total de %d pontos",flag);
-system("pause");
+return 0;
 }
