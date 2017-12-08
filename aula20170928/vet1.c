@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-using namespace std;
+
 
 const int num=10000;
-void main()
+int main()
 {
 srandt(time(0));
 int n,i;
 float vetor[num],soma=0,media;
-printf("Digite um numero inteiro e n„o negativo: ")
+printf("Digite um numero inteiro e n√£o negativo: ")
 scanf("%f",&n);
 if (n<0)
 prinftf("Digite outro numero!");
