@@ -4,7 +4,7 @@
 int main()
 {
 int n;
-printf("Digite um numero para teste: ");
+printf("Digite um numero para realizar o teste: ");
 scanf("%d",&n);
 if(n%2==0)
 {
