@@ -1,8 +1,7 @@
 #include <iostream>
 #include <stdio.h>
-using namespace std;
 
-void main()
+int main()
 {
 int n;
 printf("Digite um numero para teste: ");
@@ -21,6 +20,6 @@ prinft("O numero e impar");
 if(n%5==0)
 printf("O numero e multiplo de 5");
 }
-system("pause");
+return 0;
 }
 
