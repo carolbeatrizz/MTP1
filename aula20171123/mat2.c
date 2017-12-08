@@ -20,5 +20,5 @@ double main()
 	}
 	else
         printf("A matriz nao e' quadrada!");
-	return EXIT_SUCCESS;
+	return 0;
 }
