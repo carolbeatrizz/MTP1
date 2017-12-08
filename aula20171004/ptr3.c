@@ -13,6 +13,6 @@ int main()
 			flag ++;
 	}
 	printf("O numero de bytes com pelo menos um bit igual a 1 vale: %d\n", flag);
-	system("pause");
+	return 0;
 }
 
