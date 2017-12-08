@@ -37,5 +37,5 @@ for(j=1; j<5; j++)
 				{
 					printf(" %s ",nome[i]);
 				}
-				system("pause");
+				return 0;
 }
