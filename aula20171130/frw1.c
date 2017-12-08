@@ -76,5 +76,5 @@ int main()
     printf("Entre com o arquivo: ");
     scanf("%s", nome_arquivo);
     while (menu(nome_arquivo) !=3);
-    return EXIT_SUCCESS;
+    return 0;
 }
