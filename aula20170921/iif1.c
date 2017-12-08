@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-using namespace std;
 
-void main ()
+
+int main ()
 {
 	int i;
 	float n, cont=0, num;
