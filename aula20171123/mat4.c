@@ -27,5 +27,5 @@ int main()
 	}
 	else
         printf("Nao e possivel realizar a multiplicacao");
-	return EXIT_SUCCESS;
+	return 0;
 }
