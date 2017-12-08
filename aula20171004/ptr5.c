@@ -28,7 +28,6 @@ int main()
 		}
 	}
 	printf(" \n %d sao bytes iguais a %d , entre o endereco %p e o endereco %p na memoria\n ", flag, num, ponteiro, ponteiro+sizeof(vet) );
-	system("pause");
-}
+	return 0;}
 
 
