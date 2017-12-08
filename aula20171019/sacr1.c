@@ -20,5 +20,5 @@ int main()
     } 
 	while(c != 'q' && c != 'Q');
     printf("Agradecemos a preferencia!\n");
-    system("pause");
+    return 0;
 }
