@@ -68,5 +68,5 @@ int main()
     free(conjunto);
 	lerTexto(nome,150);
 	centroide(nome,conjunto[i].y,conjunto[i].x,150);
-    return EXIT_SUCCESS;
+    return 0;
 }
