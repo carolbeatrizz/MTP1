@@ -1,10 +1,9 @@
-#include <iostream>
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-using namespace std;
 
-void main()
+int main()
 {
 srand(time(0));
 int n,flag=0,num1,num2,num3,num4;
