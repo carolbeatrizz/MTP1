@@ -1,8 +1,7 @@
-#include <iostream>
-#include <stdio.h>
-using namespace std;
 
-void main ()
+#include <stdio.h>
+
+int main ()
 {
     int base, expoente, i, resultado;
     printf("Insira um numero inteiro para ser a base: ");
@@ -15,5 +14,5 @@ void main ()
         base=base*base;
     }
     printf("O resultado da potencia vale:%base",&base)
-    system("pause");
+   return 0;
 }
