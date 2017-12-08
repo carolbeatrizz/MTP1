@@ -19,5 +19,5 @@ int main()
 	{
 		printf(" %c ", ponteiro[i]);
 	}
-	system("pause");
+	return 0;
 }
