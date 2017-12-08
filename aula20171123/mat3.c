@@ -29,5 +29,5 @@ int main()
 	}
 	else
         printf("Digite uma matriz quadrada!");
-	return EXIT_SUCCESS;
+	return 0;
 }
