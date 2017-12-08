@@ -16,5 +16,5 @@ int main()
 	printf("\nFrase em hexadecimal:");
 	for (i=0; i<sizeof(str)/4; i++)
 		printf(" %x ", ponteiro [i]);
-	system("pause");
+	return 0;
 }
