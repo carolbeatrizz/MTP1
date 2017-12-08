@@ -1,8 +1,8 @@
-#include <iostream>
-#include <stdio.h>
-using namespace std;
 
-void main()
+#include <stdio.h>
+
+
+int main()
 {
 float a,b,c,d,e,media;
 printf("Digite as notas do aluno para calculo da media: \n");
@@ -18,5 +18,5 @@ printf("Nota 5: ");
 scanf("%f",&e);
 media=(2*a)+(2*b)+(2*c)+(3*d)+(5*d)/14;
 scanf("A media das notas do aluno vale: %f",media);
-system("pause");
+return 0;
 }
