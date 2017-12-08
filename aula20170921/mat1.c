@@ -1,10 +1,10 @@
 MAT1.C
-#include <iostream>
+
 #include <stdio.h>
 #include <math.h>
-using namespace std;
 
-void main()
+
+int main()
 {
 float x1,y1,x2,y2,distancia;
 printf("Digite valor para coordenada x do ponto A: ");
