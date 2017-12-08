@@ -16,5 +16,5 @@ int main()
     scanf("%d", &divisor);
     dividir (&dividendo, &divisor, &quociente, &resto);
     printf ("Resposta: %d com resto %d\n" , quociente, resto);
-    system("pause");
+    return 0;
 }
