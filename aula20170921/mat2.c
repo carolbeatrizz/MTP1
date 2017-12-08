@@ -1,9 +1,9 @@
-#include <iostream>
+
 #include <stdio.h>
 #include <math.h>
-using namespace std;
 
-void main()
+
+int main()
 {
 int b,c,a;
 float angA;
