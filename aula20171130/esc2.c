@@ -31,5 +31,5 @@ int main()
     fwrite(conjunto, sizeof(Ponto), num, arquivo);
     fclose(arquivo);
     free(conjunto);
-    return EXIT_SUCCESS;
+    return 0;
 }
