@@ -29,5 +29,5 @@ int main() {
 		par(n);
 	if(a==2)
 		impar(n);
-	system("pause");
+	return 0;
 }
