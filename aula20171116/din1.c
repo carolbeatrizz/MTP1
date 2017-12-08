@@ -34,3 +34,5 @@ int main()
         printf("Elemento [%d]: ", i);
         scanf("%f", &(v[i]));
     }
+	return 0;
+}
