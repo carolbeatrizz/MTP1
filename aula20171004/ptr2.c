@@ -13,5 +13,5 @@ int main()
 			flag++;
 	}
 	printf("O total de bytes iguais a 0's encontrados: %d\n", flag);
-	system("pause");
+	return 0;
 }
