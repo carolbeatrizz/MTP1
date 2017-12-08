@@ -14,6 +14,6 @@ int main()
 	printf("O endereco do segundo numero: %p e seu conteudo: %d", &b, b);
 	soma = a + b;
 	printf("O endereco da soma: %p e seu conteudo: %d", &soma, soma);
-	system("pause");
+	return 0;
 }
 
