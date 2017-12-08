@@ -39,6 +39,6 @@ int main ()
 	}while (rodada<3);
 
 	printf("Seu resultado final eh de %d pontos.\n", total);
-    system ("pause");
+    return 0;
 
 }
