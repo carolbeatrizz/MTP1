@@ -1,10 +1,10 @@
 Integrantes do grupo:
-Sâmara Cristina Santos                  MAT0 11611EBI011
+SÃ¢mara Cristina Santos                  MAT0 11611EBI011
 Carolina Beatriz Pereira da Silva    MAT1 11711EBI022
-Alana Miyai Bonitátibus                  MAT2 11711EBI018
+Alana Miyai BonitÃ¡tibus                  MAT2 11711EBI018
 
 ---
-QUESTÃO 1
+QUESTÃƒO 1
 
 KANO0=2
 KANO1=3
@@ -19,9 +19,9 @@ KNUM1=5
 KNUM2=1
 
 ---
-QUESTÃO 2
+QUESTÃƒO 2
 
-Código original
+CÃ³digo original
 
 #include <stdio.h>
 #include <conio.h>
@@ -67,7 +67,7 @@ return EXIT_SUCCESS;
 2o: 46.000000
 3o: 61.000000
 
-Código com alterações
+CÃ³digo com alteraÃ§Ãµes
 
 #include <conio.h>
 #include <string.h>
@@ -113,14 +113,14 @@ int main()
 }
 
 
-O problema da memória estava no acúmulo de números gravados na função media_de_aleatorios, resolvido utilizando free(media_de_aleatorios),
- que evita o vazamento de memória. Já o bug do código estava na inclusão da biblioteca time.h e utilização de srand(time(NULL)) para permitir a geração de 
-números aleatórios, diferente das sequências iniciais que demonstravam sempre os mesmos valores.
- Além disso a função intitula-se média dos valores quando na verdade ela realiza um somatório, logo o somatório deveria ser dividido por 10,
- e os parâmetros ID enviados a ela não são utilizados para seu cálculo.
+O problema da memÃ³ria estava no acÃºmulo de nÃºmeros gravados na funÃ§Ã£o media_de_aleatorios, resolvido utilizando free(media_de_aleatorios),
+ que evita o vazamento de memÃ³ria. JÃ¡ o bug do cÃ³digo estava na inclusÃ£o da biblioteca time.h e utilizaÃ§Ã£o de srand(time(NULL)) para permitir a geraÃ§Ã£o de 
+nÃºmeros aleatÃ³rios, diferente das sequÃªncias iniciais que demonstravam sempre os mesmos valores.
+ AlÃ©m disso a funÃ§Ã£o intitula-se mÃ©dia dos valores quando na verdade ela realiza um somatÃ³rio, logo o somatÃ³rio deveria ser dividido por 10,
+ e os parÃ¢metros ID enviados a ela nÃ£o sÃ£o utilizados para seu cÃ¡lculo.
 
 ---
-QUESTÃO 3
+QUESTÃƒO 3
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -173,8 +173,8 @@ fclose(arq);
 return EXIT_SUCCESS;
 }
 
-Resultado obtido após rodar o programa:
-Código 971
+Resultado obtido apÃ³s rodar o programa:
+CÃ³digo 971
 
 
 #include <stdio.h>
@@ -242,16 +242,16 @@ getche ();
 return 0;
 }
 
-Resultado obtido após rodar o programa:
-Matrícula: 971
+Resultado obtido apÃ³s rodar o programa:
+MatrÃ­cula: 971
 Media [0.418598 0.418598 0.418598] = 0.418598
- A função adicionada ao programa contempla três opções de resultados, para idA, idB e idC. Em cada for é utilizado fseek (FILE *fp,long numbytes,int origem)
- de modo a encontrar a posição de idA, idB ou idC no ponteiro, e em seguida o fread(void *buffer, int numero_de_bytes, int count, FILE *fp) encarrega-se de ler 
-e guardar este valor em nA, nB e nC para que as médias possam ser calculadas no main.
+ A funÃ§Ã£o adicionada ao programa contempla trÃªs opÃ§Ãµes de resultados, para idA, idB e idC. Em cada for Ã© utilizado fseek (FILE *fp,long numbytes,int origem)
+ de modo a encontrar a posiÃ§Ã£o de idA, idB ou idC no ponteiro, e em seguida o fread(void *buffer, int numero_de_bytes, int count, FILE *fp) encarrega-se de ler 
+e guardar este valor em nA, nB e nC para que as mÃ©dias possam ser calculadas no main.
 
-QUESTÃO 4
+QUESTÃƒO 4
 
-Código original
+CÃ³digo original
 
 #include <conio.h>
 #include <stdio.h>
@@ -358,7 +358,7 @@ Nome: Mickey
 Matricula: 019
 Idade: 98
 
-Código com alterações
+CÃ³digo com alteraÃ§Ãµes
 
 #include <conio.h>
 #include <stdio.h>
@@ -456,9 +456,9 @@ int main() {
 }
 
 
-No caso da função gravar, ao abrirmos um arquivo do tipo "w", toda vez que ele
-é criado ocorre uma sobreposição em relação ao próximo arquivo gravado. Logo,
-alterou-se essa parte do código para um arquivo do tipo "a".
+No caso da funÃ§Ã£o gravar, ao abrirmos um arquivo do tipo "w", toda vez que ele
+Ã© criado ocorre uma sobreposiÃ§Ã£o em relaÃ§Ã£o ao prÃ³ximo arquivo gravado. Logo,
+alterou-se essa parte do cÃ³digo para um arquivo do tipo "a".
 
 
 
